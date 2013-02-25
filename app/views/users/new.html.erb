@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>User Registration</h3>
+
+  <div class="flash">
+    <%- if !notice.nil? -%>
+      <p class="notice"><%= notice %></p>
+    <%- end -%> 
+    <%- if !alert.nil? -%>
+      <p class="alert alert-error"><%= alert %></p>
+    <%- end -%>     
+  </div>
+
+  <div>
+    <%= render 'form' %>   
+  </div>
+  <%= link_to 'Home Page', root_url %>
+</div>

@@ -1,0 +1,42 @@
+<%= form_for(@user, :html => { :class => "new_registration form-horizontal"}) do |f| %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-error" id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+		
+		<div id='username_div' class='control-group'>
+			<label class="control-label" for="username">First Name</label>
+			<div class='controls'><input class="customfield" id="user_fname" name="user[fname]" type="text" value="" />&nbsp;
+			</div>
+		</div>
+		
+		<div id='username_div' class='control-group'>
+			<label class="control-label" for="username">Last Name</label>
+			<div class='controls'><input class="customfield" id="user_lname" name="user[lname]" type="text" value="" />&nbsp;
+			</div>
+		</div>
+		
+		<div id='username_div' class='control-group'>
+			<label class="control-label" for="username">Password</label>
+			<div class='controls'><input class="customfield" id="user_password" name="user[password]" type="text" value="" />&nbsp;
+			</div>
+		</div>    
+		
+		<div id='username_div' class='control-group'>
+			<label class="control-label" for="username">Email</label>
+			<div class='controls'><input class="customfield" id="user_email" name="user[email]" type="text" value="" />&nbsp;
+			</div>
+		</div> 
+
+		<div class="well form-actions">
+			<button type="submit" name="commit" class="btn btn-primary">Signup</button>
+		</div>
+
+<% end %>

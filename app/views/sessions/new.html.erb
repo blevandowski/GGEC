@@ -1,0 +1,30 @@
+<%= form_tag sessions_path, :class => "form-horizontal" do %>
+
+<div class="container">
+	<h3>Welcome back!</h3>
+    <p>Please note: Email and Password are case sensitive</p>
+
+
+  <div class="flash">
+    <%- if !notice.nil? -%>
+      <p class="notice"><%= notice %></p>
+    <%- end -%> 
+    <%- if !alert.nil? -%>
+      <p class="alert alert-error"><%= alert %></p>
+    <%- end -%>     
+  </div>
+
+	<div id='username_div' class='control-group'><label class="control-label" for="email">Email</label><div class='controls'><input class="  customfield" id="email" name="email" placeholder="Email" type="text" value="" />&nbsp;</div></div>	              
+	<div id='password_div' class='control-group'><label class="control-label" for="password">Password</label><div class='controls'><input class="xlarge  customfield" id="password" name="password" placeholder="Password" type="password" value="" /></div></div>
+
+	Not a member? Sign up <%= link_to 'here', signup_path %>!
+	
+	
+	<div class="well form-actions">
+		<button type="submit" class="btn btn-primary">Login</button>
+	</div>
+	
+<% end %>
+<%= link_to 'Home Page', root_url %>
+</div>
+
